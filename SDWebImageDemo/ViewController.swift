@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
+    // MARK: - IBOutlet
+    @IBOutlet weak var imageView: UIImageView!
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let imgURL = NSURL(string: "https://cdn.spacetelescope.org/archives/images/large/heic1509a.jpg")
+        imageView.sd_setImageWithURL(imgURL)
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
